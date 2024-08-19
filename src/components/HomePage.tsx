@@ -12,7 +12,7 @@ import { DexScreenerIcon } from "@/components";
 
 export function HomePage() {
   const countUpRef = useRef(null);
-  const totalSupply = 999959040.03;
+  const totalSupply = 666594890.37;
   const balance = useBalance();
   const price = usePrice();
   const value = useMemo(() => {
@@ -102,7 +102,10 @@ export function HomePage() {
           </HStack>
           <Text textAlign="center">
             This is a community-initiated IMARO token burning event lasting
-            until August 31st
+            until August 30th. First BURN event:{" "}
+            <Link href="https://burn.imaro.meme" isExternal>
+              https://burn.imaro.meme
+            </Link>
           </Text>
         </VStack>
       </Flex>
