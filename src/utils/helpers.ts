@@ -64,11 +64,6 @@ export const NumberFormats: Record<string, FNumOptions> = {
     maximumFractionDigits: 2,
   },
   // Basis Points
-  bp: {
-    style: "bp",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  },
   token: {
     maximumFractionDigits: 2,
   },
@@ -97,15 +92,8 @@ export function formatNumber(
     return "-";
   }
 
-  // bp - basis points
-  if (options.style === "bp") {
-    number = bnum(number).div(10000).toNumber();
-    options = { ...options, style: "percent" };
-  }
-
   const formatterOptions: Intl.NumberFormatOptions = {
     ...options,
-    // @ts-expect-error
     roundingMode: "trunc",
   };
   let postfixSymbol = "";
