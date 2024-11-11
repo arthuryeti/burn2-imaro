@@ -6,9 +6,7 @@ export function usePrice() {
   const { data } = useQuery({
     queryKey: ["price"],
     queryFn: async () => {
-      const res = await fetch(
-        `https://price.jup.ag/v4/price?ids=${tokenPubKey}&vsToken=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`
-      );
+      const res = await fetch(`https://api.jup.ag/price/v2?ids=${tokenPubKey}`);
 
       return res.json();
     },

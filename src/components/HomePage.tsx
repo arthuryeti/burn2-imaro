@@ -102,7 +102,7 @@ export function HomePage() {
           </HStack>
           <Text textAlign="center">
             This is a community-initiated IMARO token burning event lasting
-            until August 30th. First BURN event:{" "}
+            until November 22nd. First BURN event:{" "}
             <Link href="https://burn.imaro.meme" isExternal>
               https://burn.imaro.meme
             </Link>
